@@ -79,10 +79,10 @@
     </div>
 </div> -->
 
-
+kitty
   <?php
       // session_start();
-
+      
       require "connecttoserver.php"; // За връзка със сървъра 
       require "createdatabase.php"; // За създаване на базата данни
   ?>
