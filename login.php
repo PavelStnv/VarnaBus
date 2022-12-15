@@ -30,7 +30,7 @@
   <div class="container px-4">
     <div class="container-fluid">
       <div class="row my-row">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-5">
             <form method ="post">
               <div class="row col-md-10">
               <div class="mb-3">
@@ -39,7 +39,7 @@
               </div>
               </div>
               <div class="row col-md-10"></div>
-              <div class="row col-md-6">
+              <div class="row col-md-10">
               <div class="mb-3">
                   <label for="password" class="form-label">Парола</label>
                   <input type="password" class="form-control" id="password" name="password" required>
