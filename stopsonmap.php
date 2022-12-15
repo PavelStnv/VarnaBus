@@ -63,7 +63,7 @@
   <div class="row mb-3">
     <div class="col-4"></div>
     <div class="col-4 d-flex justify-content-center">
-      <select id="line_number"  name="line_number" style="width: 300px">
+      <select id="line_number"  name="line_number" style="width: 500px">
         <option value="0">Изберете линия</option>
         <?php foreach ($options as $option) { ?>
         <option value=<?php echo $option['id'];?>><?php echo $option['line_number']; ?> </option>
@@ -84,10 +84,8 @@
     </div>
     <div class="col-9">
     <div class="wrapper">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93047.85536441917!2d27.856380701630176!3d43.214827471195036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4538baaf3d7a1%3A0x5727941c71a58b7c!2sVarna!5e0!3m2!1sen!2sbg!4v1669478747612!5m2!1sen!2sbg"
-      responsive-iframe  style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe id="mainmap" src="" responsive-iframe  style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" width="640" height="480"></iframe>
     </div>
     </div>
   </div>
@@ -140,9 +138,21 @@
         //echo "<script> document.getElementById(\"allstops\").value += '$stop'</script>";
         //echo "<script> document.getElementById(\"allstops\").value += <br></script>";
       }
+      echo "<script> document.getElementById(\"allstops\").innerHTML  += '$stop'</script>";
+
+      $sql = "SELECT iframe_src
+      FROM all_lines
+      WHERE id = $lineid";
+
+      $result = mysqli_query($dbConn, $sql);
+
+      $row = mysqli_fetch_assoc($result);
+      $iframe_src = $row['iframe_src'];
+
+      echo "<script> document.getElementById(\"mainmap\").src = \"$iframe_src\"</script>";
     }
 
-    echo "<script> document.getElementById(\"allstops\").innerHTML  += '$stop'</script>";
+    
 ?>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

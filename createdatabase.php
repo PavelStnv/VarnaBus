@@ -144,8 +144,9 @@
     // Създаване на таблица lines
     $sql = "CREATE TABLE IF NOT EXISTS all_lines
             (
-            id          INT(10)    NOT NULL AUTO_INCREMENT,
-            line_number INT(10)    NOT NULL,
+            id          INT(10)         NOT NULL AUTO_INCREMENT,
+            line_number INT(10)         NOT NULL,
+            iframe_src  VARCHAR(200)    NOT NULL,
             PRIMARY KEY(id)
             )
             ENGINE=INNODB DEFAULT CHARSET=utf8";
@@ -160,8 +161,8 @@
     mysqli_select_db($dbConn, $dbName);
 
     //Добавяне на данни в таблица all_lines
-    $sql=   "INSERT INTO all_lines(line_number)
-    SELECT 148
+    $sql=   "INSERT INTO all_lines(line_number, iframe_src)
+    SELECT 148, 'https://www.google.com/maps/d/u/0/embed?mid=19WunKtI4hDdG5guylrT4DG6n7kzj3pA&ehbc=2E312F'
     WHERE NOT EXISTS (SELECT * FROM all_lines where line_number = 148);";
 
     $queryResource = mysqli_query($dbConn, $sql);
@@ -171,8 +172,8 @@
         echo mysqli_error($dbConn);
     }
 
-    $sql=   "INSERT INTO all_lines(line_number)
-    SELECT 7
+    $sql=   "INSERT INTO all_lines(line_number, iframe_src)
+    SELECT 7, 'https://www.google.com/maps/d/u/0/embed?mid=1SLGfZCG-k-eUNQOk7aF35Br67iMqJ74&ehbc=2E312F'
     WHERE NOT EXISTS (SELECT * FROM all_lines where line_number = 7);";
 
     $queryResource = mysqli_query($dbConn, $sql);
@@ -182,8 +183,8 @@
         echo mysqli_error($dbConn);
     }
 
-    $sql=   "INSERT INTO all_lines(line_number)
-    SELECT 32
+    $sql=   "INSERT INTO all_lines(line_number, iframe_src)
+    SELECT 32, 'test'
     WHERE NOT EXISTS (SELECT * FROM all_lines where line_number = 32);";
 
     $queryResource = mysqli_query($dbConn, $sql);
