@@ -26,6 +26,16 @@
     width: 100%;
     height: 100%;
 }
+
+.table {
+        display: block;
+        max-width: 100%;
+        overflow: scroll;
+}
+
+td {
+    white-space: nowrap;
+}
   </style>
 
 
@@ -72,28 +82,34 @@
     </div>
     <div class="col-4">
       <form method="post">
-      <button type="submit" name="submit" class="btn btn-primary">Покажи</button>
+      <button type="submit" name="submit" onclick="display_times()" class="btn btn-primary">Покажи</button>
       <input type="hidden" id="lineid" name="lineid">
       </form>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-lg-3 mb-3 d-flex justify-content-center">
-        <textarea name="allstops" id="allstops" cols="35" rows="18" readonly></textarea>
+<div class="col-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+            <th>
+              №
+            </th>
+            <th>
+              Спирка
+            </th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
     </div>
-    <div class="col-lg-9">
-    <div class="wrapper">
-    <iframe id="mainmap" src="" responsive-iframe  style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade" width="640" height="480"></iframe>
     </div>
-    </div>
-  </div>
+
 
 </div>
-
-
-
 
 <script>
   $(document).ready(function() {
@@ -119,7 +135,7 @@
       include_once "connecttoserver.php"; // За връзка със сървъра
       include_once "createdatabase.php"; // За създаване на базата данни
 
-      $sql = "SELECT stop_name
+      $sql = "SELECT stops.id, stop_name
               FROM stops_in_line
               INNER JOIN stops
               ON stops.id = stops_in_line.stop_id
@@ -128,28 +144,79 @@
       $result = mysqli_query($dbConn, $sql);
       $stop = "";
       $counter = 1;
+      $html = "";
+
       while($row = mysqli_fetch_assoc($result))
       {
-        $stop .= $counter;
-        $stop .= ". ";
-        $stop .= $row['stop_name'];
-        $stop .= "&#13;&#10;";
+        $stop = $row['stop_name'];
+        $stop_id = $row['id'];
+
+        echo "<script>
+        var html = \"<tr>\";
+              html += \"<td>$counter</td>\";
+              html += \"<td>$stop</td>\";
+          html += \"</tr>\";
+  
+          var row = document.getElementById(\"tbody\").insertRow();
+          row.innerHTML = html
+          row.id = $stop_id;
+          </script>";
+
         $counter++;
       }
 
-      echo "<script> document.getElementById(\"allstops\").innerHTML  += '$stop'</script>";
-
-      $sql = "SELECT iframe_src
-      FROM all_lines
-      WHERE id = $lineid";
+      $sql = "CREATE TEMPORARY TABLE times
+              SELECT schedule.stop_id, time
+              FROM schedule
+              INNER JOIN stops_in_line
+              ON schedule.stop_id = stops_in_line.stop_id
+              WHERE line_id = $lineid";
 
       $result = mysqli_query($dbConn, $sql);
 
-      $row = mysqli_fetch_assoc($result);
-      $iframe_src = $row['iframe_src'];
 
-      echo "<script> document.getElementById(\"mainmap\").src = \"$iframe_src\"</script>";
-      echo "<script> document.getElementById(\"line_number\").value = \"$lineid\"</script>";
+      $sql = "CREATE TEMPORARY TABLE all_stops
+              SELECT schedule.stop_id
+              FROM schedule
+              INNER JOIN stops_in_line
+              ON schedule.stop_id = stops_in_line.stop_id
+              WHERE line_id = $lineid
+              GROUP BY schedule.stop_id";
+
+      $result = mysqli_query($dbConn, $sql);
+
+
+      $sql = "SELECT * FROM all_stops";
+      $result = mysqli_query($dbConn, $sql);
+
+      while($row = mysqli_fetch_assoc($result))
+      {
+        $stop_id = $row['stop_id'];
+        
+        $sql = "SELECT time FROM times WHERE stop_id = $stop_id";
+        $result2 = mysqli_query($dbConn, $sql);
+
+        while($row2 = mysqli_fetch_assoc($result2))
+        {
+            $time_to_insert = $row2['time'];
+
+            echo "<script>
+              var html = document.getElementById(\"$stop_id\").innerHTML;
+              
+              html += \"<td>$time_to_insert</td>\";
+              
+
+              document.getElementById(\"$stop_id\").innerHTML = html;
+              </script>";
+        }
+       
+      }
+
+      $sql = "DROP TEMPORARY TABLE all_stops";
+      $sql = "DROP TEMPORARY TABLE times";
+      mysqli_query($dbConn, $sql);
+
+      echo "<script> document.getElementById(\"line_number\").value = \"$lineid\"</script>";   
     }
 ?>
 
