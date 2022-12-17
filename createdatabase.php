@@ -453,4 +453,6 @@
     insert_times_for_stop(38, '06:54:00', '22:00:00', ' +8 minutes',  $dbConn);
     insert_times_for_stop(39, '07:03:00', '22:00:00', ' +8 minutes',  $dbConn);
     insert_times_for_stop(40, '07:09:00', '22:00:00', ' +8 minutes',  $dbConn);
+
+    mysqli_select_db($dbConn, $dbName);
     ?>

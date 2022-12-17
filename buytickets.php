@@ -14,7 +14,7 @@ session_start();
   <link rel="stylesheet" href="style.css">
   <!-- за nav bar-a-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+  <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
   <!-- за button in image -->
   <style>
     .product-holder {
@@ -285,7 +285,15 @@ session_start();
     </div>
   </div>
 
-  
+  <!--footer-->
+<!-- <div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script> -->
+<!--end of footer-->
 
 
   <script>
@@ -918,6 +926,9 @@ session_start();
     }
   }
   ?>
+
+
+
 </body>
 
 </html>

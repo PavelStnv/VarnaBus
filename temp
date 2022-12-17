@@ -1,0 +1,224 @@
+<script>
+    $("#student").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+  <!-- <script>
+    $("#pensioner").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#normal").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#allDay").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+<script>
+    $("#fortwo").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script> -->
+
+  <script>
+    $("#student").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(1) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buystudent");
+
+      var str = "Закупете билет за студенти";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <!-- <script>
+    $("#pensioner").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(2) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buypensioner");
+
+      var str = "Закупете билет за пенсионери";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#normal").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(3) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buynormal");
+
+      var str = "Закупете стандартен билет";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.00лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#allDay").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(4) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyallday");
+
+      var str = "Закупете билет за цял ден";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 10.00лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+<script>
+    $("#fortwo").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(5) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyfortwo");
+
+      var str = "Закупете билет за двама";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.90лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(6) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyforthree");
+
+      var str = "Закупете билет за трима";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 5.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script> -->
+
