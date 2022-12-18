@@ -11,7 +11,21 @@
     <link rel="stylesheet" href="style.css">
     <!-- за nav bar-a-->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+
+<style>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.scrollit {
+    overflow:scroll;
+    height:100px;
+}
+</style> 
+    
+
     <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
+
 </head>
 
 <body>
@@ -36,6 +50,10 @@
 
 
     <div class="card-group">
+        <table class="center scrollit">
+        <tr>
+        <td>
+
         <div class="card me-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -53,6 +71,12 @@
                 </div>
             </div>
         </div>
+
+        </td>
+        </tr>
+        <tr>
+        <td>
+
         <div class="card me-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -70,6 +94,12 @@
                 </div>
             </div>
         </div>
+
+        </td>
+        </tr>
+        <tr>
+        <td>
+
         <div class="card me-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
@@ -87,6 +117,56 @@
                 </div>
             </div>
         </div>
+
+        </td>
+        </tr>
+        <tr>
+        <td>
+
+        <div class="card me-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </td>
+        </tr>
+        <tr>
+        <td>
+
+        <div class="card me-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
+                        class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </td>
+        </tr>
+        </table>
 
     </div>
 
