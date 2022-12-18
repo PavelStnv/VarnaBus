@@ -111,89 +111,12 @@
   </div>
 </div>
 
-  <!--footer-->
-<div class="mt-2">
-<div id="footer"></div>
-  <script>
-  $(function(){
-    $("#footer").load("footer.php");
-  });
-  </script>
-<!--end of footer-->
-
-
-
 
   <table class="center">
     <tr><td> Новини </td></tr>
   </table>
 
-  <!-- <table class="center">
-    <tr>
-    <td>
 
-        <div class="card me-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
-                        class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      </td>
-      <td>
-
-        <div class="card me-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
-                        class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-      </td>
-      <td>
-
-        <div class="card me-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
-                        class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </td>
-      </tr>
-  </table> -->
   <div class="card-group">
         <div class="card me-3" style="max-width: 540px;">
             <div class="row g-0">
@@ -260,16 +183,15 @@
 
     </div>
 
-  <!-- <div class="container-fluid">
-    <div class="row">
-    
-    <div class = "row text-center" style="">
-    <div class="col-xs-6 text-center" style="background-color:none; margin-top:0px;">
-        <div class='product-holder'>
-        <div class="opacity-50">
-      <img
-        src="images/mangopear-creative-A3xpZYjAZyk-unsplash.jpg"
-        class="img-fluid" alt="...">
+  <!--footer-->
+  <div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script>
+<!--end of footer-->
 
  <!-- Modal -->
  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

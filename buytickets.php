@@ -286,13 +286,13 @@ session_start();
   </div>
 
   <!--footer-->
-<!-- <div class="mt-2">
+<div class="mt-2">
 <div id="footer"></div>
   <script>
   $(function(){
     $("#footer").load("footer.php");
   });
-  </script> -->
+  </script>
 <!--end of footer-->
 
 
