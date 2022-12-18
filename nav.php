@@ -21,8 +21,8 @@
               Разписание
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Спирки</a></li>
-              <li><a class="dropdown-item" href="#">График</a></li>
+              <li><a class="dropdown-item" href="stopsonmap.php">Спирки</a></li>
+              <li><a class="dropdown-item" href="schedule.php">График</a></li>
               <!--<li><hr class="dropdown-divider"></li>-->
             </ul>
           </li>

@@ -11,6 +11,23 @@
   <link rel="stylesheet" href="style.css">
   <!-- за nav bar-a-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+  <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
+
+  <style>
+    .wrapper {
+    position: relative;
+    padding-bottom: 40%;
+    padding-top: 25px;
+    height: 0;
+}
+.wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  </style>
 </head>
 
 <body>
@@ -25,20 +42,25 @@
   </script>
   <!--end of Navigation bar-->
 
-  <div class="mb-3">
-    <div class="container-fluid">
-      <div class="row">
-        <img src="images/mangopear-creative-A3xpZYjAZyk-unsplash.jpg" class="img-fluid" alt="...">
-      </div>
-    </div>
-  </div>
-
   <div class="ms-3">
+    <div class="wrapper">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93047.85536441917!2d27.856380701630176!3d43.214827471195036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4538baaf3d7a1%3A0x5727941c71a58b7c!2sVarna!5e0!3m2!1sen!2sbg!4v1669478747612!5m2!1sen!2sbg"
-    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    responsive-iframe  style="border:0;" allowfullscreen="" loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
+  </div>
+
+<!--footer-->
+<div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script>
+  </div>
+<!--end of footer-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

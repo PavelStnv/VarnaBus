@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- за nav bar-a-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+  <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
   <div class="container px-4">
     <div class="container-fluid">
       <div class="row my-row">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-5">
             <form method ="post">
               <div class="row col-md-10">
               <div class="mb-3">
@@ -39,7 +40,7 @@
               </div>
               </div>
               <div class="row col-md-10"></div>
-              <div class="row col-md-6">
+              <div class="row col-md-10">
               <div class="mb-3">
                   <label for="password" class="form-label">Парола</label>
                   <input type="password" class="form-control" id="password" name="password" required>
@@ -108,6 +109,16 @@
             }
         }
     ?>
+
+<!--footer-->
+<div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script>
+<!--end of footer-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
