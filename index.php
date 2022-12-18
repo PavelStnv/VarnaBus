@@ -56,28 +56,28 @@
 
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-          <button type="submit" id="student" name="buystudent"  class="btn btn-lg w-100 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Студентски</button>
+          <button type="submit" disabled id="student" name="buystudent"  class="btn btn-lg w-100 btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Студентски</button>
           </div>
           <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-          <button type="submit" name="buypensioner" id="pensioner" class="btn w-100 btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Пенсионерски</button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-          <button type="submit" name="buynormal" id="normal" class="btn w-100 btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Стандартен</button>
-          </div>
-          <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-          <button type="submit" name="buyallday" class="btn btn-primary w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" id="allDay">За цял ден</button>
+          <button type="submit" disabled name="buypensioner" id="pensioner" class="btn w-100 btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Пенсионерски</button>
           </div>
         </div>
 
         <div class="row">
           <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-            <button type="button" name="buyfortwo" id="fortwo" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">За двама</button>
+          <button type="submit" disabled name="buynormal" id="normal" class="btn w-100 btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Стандартен</button>
           </div>
           <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
-            <button type="button" name="buyforthree" id="forthree" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">За трима</button>
+          <button type="submit" disabled name="buyallday" class="btn btn-primary w-100 btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" id="allDay">За цял ден</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
+            <button type="button" disabled name="buyfortwo" id="fortwo" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">За двама</button>
+          </div>
+          <div class="col-lg-6 col-md-12 mb-0 g-3 col-sm-12">
+            <button type="button" disabled name="buyforthree" id="forthree" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">За трима</button>
           </div>
         </div>
 
@@ -147,7 +147,11 @@
       include_once "createdatabase.php"; // За създаване на базата данни
   ?>
 
-
+<script>
+$(document).ready(function(){
+    $('button').attr('disabled',false);
+});
+</script>
 
 <script>
     $("#student").click(function() {
@@ -163,8 +167,75 @@
   </script>
 
   <script>
+    $("#pensioner").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#normal").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#allDay").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+<script>
+    $("#fortwo").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
     $("#student").click(function() {
-      alert('222222');
       let canContinue = "<?php echo checkIfTicketAlreadyBought(1) ?>";
       if (canContinue != 1) {
         alert("Вече имате закупен билет!");
@@ -186,6 +257,127 @@
       $("#price").html(str);
     });
   </script>
+
+  <script>
+    $("#pensioner").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(2) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buypensioner");
+
+      var str = "Закупете билет за пенсионери";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#normal").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(3) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buynormal");
+
+      var str = "Закупете стандартен билет";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.00лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#allDay").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(4) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyallday");
+
+      var str = "Закупете билет за цял ден";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 10.00лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+<script>
+    $("#fortwo").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(5) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyfortwo");
+
+      var str = "Закупете билет за двама";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.90лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(6) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyforthree");
+
+      var str = "Закупете билет за трима";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 5.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
 
 <?php
 
@@ -211,6 +403,14 @@
     $carddate = $_POST['valid'];
     $cardcvcode = $_POST['cvcode'];
     BuyTicket(3);
+  }
+
+  if (isset($_POST['buyallday'])) {
+    $cardnum = $_POST['cardnum'];
+    $cardname = $_POST['cardname'];
+    $carddate = $_POST['valid'];
+    $cardcvcode = $_POST['cvcode'];
+    BuyTicket(4);
   }
 
   if (isset($_POST['buyfortwo'])) {
@@ -242,8 +442,8 @@
   {
     $can_continue = True;
 
-    include_once "connecttoserver.php"; // За връзка със сървъра 
-    include_once "createdatabase.php"; // За създаване на базата данни
+    require "connecttoserver.php"; // За връзка със сървъра 
+    require "createdatabase.php"; // За създаване на базата данни
 
     date_default_timezone_set('Europe/Sofia');
     $date = date('Y-m-d H:i:s a', time());
@@ -270,8 +470,8 @@
 
   function BuyTicket($ticket_type)
   {
-    include_once "connecttoserver.php"; // За връзка със сървъра 
-    include_once "createdatabase.php"; // За създаване на базата данни
+    require "connecttoserver.php"; // За връзка със сървъра 
+    require "createdatabase.php"; // За създаване на базата данни
 
     date_default_timezone_set('Europe/Sofia');
     $date = date('Y-m-d H:i:s a', time());

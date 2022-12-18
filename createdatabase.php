@@ -238,7 +238,7 @@
     mysqli_select_db($dbConn, $dbName);
 
     // Добавяне на спирките
-
+    if(!function_exists("insert_stop")) {
     function insert_stop($stop_name, $dbConn)
     {
         $sql=   "INSERT INTO stops(stop_name)
@@ -252,7 +252,7 @@
             echo mysqli_error($dbConn);
         }
     }
-
+    }
     insert_stop('Младост', $dbConn);
     insert_stop('Петър Берон', $dbConn);
     insert_stop('Васил Левски', $dbConn);
@@ -314,6 +314,7 @@
     mysqli_select_db($dbConn, $dbName);
 
     // Добавяне на спирките и линиите
+    if(!function_exists("insert_stop_in_line")) {
     function insert_stop_in_line($line_id, $stop_id, $dbConn)
     {
         $sql=   "INSERT INTO stops_in_line(line_id, stop_id)
@@ -327,7 +328,7 @@
             echo mysqli_error($dbConn);
         }
     }
-
+    }
     insert_stop_in_line(1, 1, $dbConn);
     insert_stop_in_line(1, 2, $dbConn);
     insert_stop_in_line(1, 3, $dbConn);
@@ -388,6 +389,7 @@
     mysqli_select_db($dbConn, $dbName);
 
     // Добавяне на времената
+    if(!function_exists("insert_times_for_stop")) {
     function insert_times_for_stop($stop_id, $start_time, $end_time, $interval, $dbConn)
     {
         $time = $start_time;
@@ -408,7 +410,18 @@
             $time = date('H:i:s', strtotime($time. $interval));
         }
     }
+    }
 
+    $sql=   "SELECT * FROM schedule";
+
+    $queryResource = mysqli_query($dbConn, $sql);
+    if (!$queryResource)
+    {
+        echo "Грешка при добавяне на записи.";
+        echo mysqli_error($dbConn);
+    }
+
+    if (mysqli_num_rows($queryResource) == 0) {
     insert_times_for_stop(1, '06:00:00', '22:00:00', ' +15 minutes',  $dbConn);
     insert_times_for_stop(2, '06:05:00', '22:00:00', ' +15 minutes',  $dbConn);
     insert_times_for_stop(3, '06:10:00', '22:00:00', ' +15 minutes',  $dbConn);
@@ -453,6 +466,6 @@
     insert_times_for_stop(38, '06:54:00', '22:00:00', ' +8 minutes',  $dbConn);
     insert_times_for_stop(39, '07:03:00', '22:00:00', ' +8 minutes',  $dbConn);
     insert_times_for_stop(40, '07:09:00', '22:00:00', ' +8 minutes',  $dbConn);
-
+    }
     mysqli_select_db($dbConn, $dbName);
     ?>
