@@ -23,7 +23,8 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="stopsonmap.php">Спирки</a></li>
               <li><a class="dropdown-item" href="schedule.php">График</a></li>
-              <!--<li><hr class="dropdown-divider"></li>-->
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="timers.php">Време до пристигане</a></li>
             </ul>
           </li>
           <li class="nav-item">

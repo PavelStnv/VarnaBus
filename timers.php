@@ -26,6 +26,17 @@
     width: 100%;
     height: 100%;
 }
+
+.table {
+        display: block;
+        max-width: 100%;
+        overflow: scroll;
+}
+
+td {
+    white-space: nowrap;
+}
+
   </style>
 
 
@@ -61,7 +72,17 @@
 <div class="container-fluid">
 
   <div class="row mb-3">
-    <div class="col-4"></div>
+    <div class="col-4">
+    
+    <div id="countdown">
+
+      <span id="days"></span>
+      <span id="hours"></span>
+      <span id="minutes"></span>
+      <span id="seconds"></span>
+
+    </div>
+    </div>
     <div class="col-4 d-flex justify-content-center">
       <select id="line_number"  name="line_number" style="width: 500px">
         <option value="0">Изберете линия</option>
@@ -79,16 +100,28 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-3 mb-3 d-flex justify-content-center">
-        <textarea name="allstops" id="allstops" cols="35" rows="18" readonly></textarea>
+<div class="col-12">
+        <table id = "mytable" class="table table-hover">
+          <thead>
+            <tr>
+            <th>
+              №
+            </th>
+            <th>
+              Спирка
+            </th>
+            <th>
+              Оставащо време
+            </th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
     </div>
-    <div class="col-lg-9">
-    <div class="wrapper">
-    <iframe id="mainmap" src="" responsive-iframe  style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade" width="640" height="480"></iframe>
     </div>
-    </div>
-  </div>
+
 
 </div>
 
@@ -104,7 +137,7 @@
         });
 });
 </script>
-
+ 
 <!--footer-->
 <div class="mt-2">
 <div id="footer"></div>
@@ -114,6 +147,58 @@
   });
   </script>
 <!--end of footer-->
+
+<script>
+
+  function subtractSeconds(numOfSeconds, date) {
+    date.setSeconds(date.getSeconds() - numOfSeconds);
+
+    return date;
+  }
+
+  function padTo2Digits(num) {
+  return String(num).padStart(2, '0');
+  }
+
+  var intervalId = window.setInterval(function(){
+    //let one = document.getElementById("1").textContent;
+    var table_contents = document.getElementById("mytable").innerHTML;
+    const myArray = table_contents.split("</td><td id=\"");
+    myArray.shift();
+    var array_length = myArray.length;
+
+    for (var i = 0; i < array_length; i++) {
+      //console.log(myArray[i].replace(/(^\d+)(.+$)/i,'$1'));
+      const col_id = myArray[i].substring(0, myArray[i].indexOf('\"'));
+      var time = document.getElementById(col_id).textContent;
+      if(time == '00:00:00')
+      {
+        document.getElementById(col_id).textContent = 'На спирката';
+        continue;
+      }
+      if(time == 'На спирката')
+      {
+        continue;
+      }
+      let false_date_begin = '2022-06-24T';
+      let false_date_end = '.000';
+      let false_date_text = false_date_begin.concat(time);
+      false_date_text = false_date_text.concat(false_date_end);
+      let false_date = new Date(false_date_text);
+     
+      let new_date = subtractSeconds(1, false_date);
+      
+      let new_time =  padTo2Digits(new_date.getHours()) + ':' + padTo2Digits(new_date.getMinutes()) + ':' + padTo2Digits(new_date.getSeconds());
+      
+      document.getElementById(col_id).textContent = new_time;
+      // if(time > '00:00:00')
+      // {
+      //   time = 
+      // }
+    }
+
+}, 1000);
+</script>
 
 <?php
     if(isset($_POST['submit']))
@@ -129,7 +214,7 @@
       include_once "connecttoserver.php"; // За връзка със сървъра
       include_once "createdatabase.php"; // За създаване на базата данни
 
-      $sql = "SELECT stop_name
+      $sql = "SELECT stops.id, stop_name
               FROM stops_in_line
               INNER JOIN stops
               ON stops.id = stops_in_line.stop_id
@@ -138,31 +223,53 @@
       $result = mysqli_query($dbConn, $sql);
       $stop = "";
       $counter = 1;
+
+      date_default_timezone_set('Europe/Sofia');
+      $current_time = date('H:i:s', time());
+      $time_left;
+
       while($row = mysqli_fetch_assoc($result))
       {
-        $stop .= $counter;
-        $stop .= ". ";
-        $stop .= $row['stop_name'];
-        $stop .= "&#13;&#10;";
+        $stop = $row['stop_name'];
+        $stop_id = $row['id'];
+
+        $sql = "SELECT time
+              FROM schedule
+              WHERE stop_id = $stop_id";
+
+        $result2 = mysqli_query($dbConn, $sql);
+        while($row2 = mysqli_fetch_assoc($result2))
+        {
+          $stop_time = $row2['time'];
+          if($stop_time > $current_time)
+          {
+            $time_left = strtotime($stop_time) - strtotime($current_time);
+            $time_left = gmdate("H:i:s",$time_left);
+            break;
+          }
+        }
+
+
+        echo "<script>
+        var html = \"<tr>\";
+              html += \"<td>$counter</td>\";
+              html += \"<td>$stop</td>\";
+              html += \"<td id=$stop_id>$time_left</td>\";
+          html += \"</tr>\";
+  
+          var row = document.getElementById(\"tbody\").insertRow();
+          row.innerHTML = html;
+
+          </script>";
+
         $counter++;
       }
 
-      echo "<script> document.getElementById(\"allstops\").innerHTML  += '$stop'</script>";
-
-      $sql = "SELECT iframe_src
-      FROM all_lines
-      WHERE id = $lineid";
-
-      $result = mysqli_query($dbConn, $sql);
-
-      $row = mysqli_fetch_assoc($result);
-      $iframe_src = $row['iframe_src'];
-
-      echo "<script> document.getElementById(\"mainmap\").src = \"$iframe_src\"</script>";
       echo "<script> document.getElementById(\"line_number\").value = \"$lineid\"</script>";
       echo "<script> document.getElementById(\"lineid\").value = \"$lineid\"</script>";
     }
 ?>
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
