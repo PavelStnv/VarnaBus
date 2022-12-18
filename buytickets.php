@@ -14,7 +14,7 @@ session_start();
   <link rel="stylesheet" href="style.css">
   <!-- за nav bar-a-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+  <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
   <!-- за button in image -->
   <style>
     .product-holder {
@@ -87,80 +87,215 @@ session_start();
   <div class="mt-3">
     <div class="card-group">
 
-      <div class="card">
+      <div class="card border-primary">
         <button type="submit" name="buystudent" id="student" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
           <div class="img-wrapper">
             <img src="images/laptop-ga9ed9dc85_1920 Cropped.jpg" class="card-img-top inner-img" alt="...">
           </div>
         </button>
+
         <div class="card-body">
-          <h5 class="card-title">За студенти</h5>
-          <p class="card-text">За лица до 26 годишна възраст.<br>
-            Валидонст: 1 час<br>
-            <b> Цена: 1.50лв</b>
-          </p>
+          <div class="row">
+            <h5 class="card-title">За студенти</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">За лица до 26 годишна възраст.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            1 час<br>
+            <b>1.50лв</b>
+            </div>
+            </p>
+          </div>
         </div>
+
         <div class="card-footer">
-          <button type="submit" name="buystudent" id="student2" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
+          <button type="submit" name="buystudent" id="student2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card border-primary">
         <button type="submit" name="buypensioner" id="pensioner" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
           <div class="img-wrapper">
             <img src="images/elderly-gc5a6c604e_1920 Cropped.jpg" class="card-img-top inner-img" alt="...">
           </div>
         </button>
         <div class="card-body">
-          <h5 class="card-title">За пенсионери</h5>
-          <p class="card-text">За лица над 60 годиншна възраст.<br>
-            Валидонст: 1 час<br>
-            <b> Цена: 1.50лв</b>
-          </p>
+          <div class="row">
+            <h5 class="card-title">За пенсионери</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">За лица над 60 годишна възраст.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            1 час<br>
+            <b>1.50лв</b>
+            </div>
+            </p>
+          </div>
         </div>
         <div class="card-footer">
-          <button type="submit" name="buypensioner" id="pensioner2" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
+          <button type="submit" name="buypensioner" id="pensioner2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card border-primary">
         <button type="submit" name="buynormal" id="normal" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
           <div class="img-wrapper">
             <img src="images/egor-litvinov-RlHI0cCNThY-unsplash Cropped.jpg" class="card-img-top inner-img" alt="...">
           </div>
         </button>
         <div class="card-body">
-          <h5 class="card-title">Нормален билет</h5>
-          <p class="card-text">Обикновен билет. <br>Валидонст: 1 час.<br>
-            <b> Цена: 2.00лв</b>
-          </p>
+          <div class="row">
+            <h5 class="card-title">Стандартен билет</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">Обикновен билет.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            1 час<br>
+            <b>2.00лв</b>
+            </div>
+            </p>
+          </div>
         </div>
         <div class="card-footer">
-          <button type="submit" name="buynormal" id="normal2" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
+          <button type="submit" name="buynormal" id="normal2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
         </div>
       </div>
 
-      <div class="card">
+      <div class="card border-primary">
         <button type="submit" name="buyallday" id="allDay" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
           <div class="img-wrapper">
             <img src="images/towfiqu-barbhuiya-bwOAixLG0uc-unsplash Cropped.jpg" class="card-img-top inner-img" alt="...">
           </div>
         </button>
         <div class="card-body">
-          <h5 class="card-title">За цял ден</h5>
-          <p class="card-text">Билет за всички линии.<br>
-            Валидонст: 24 часа<br>
-            <b> Цена: 10.00лв</b>
-          </p>
+          <div class="row">
+            <h5 class="card-title">За цял ден</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">Билет за всички линии.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            24 часа<br>
+            <b>10.00лв</b>
+            </div>
+            </p>
+          </div>
         </div>
         <div class="card-footer">
-          <button type="submit" name="buyallday2" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" id="allDay2">Купи</button>
+          <button type="submit" name="buyallday2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="allDay2">Купи</button>
         </div>
       </div>
 
     </div>
   </div>
 
+
+  
+<div class="mt-3">
+    <div class="card-group">
+
+      <div class="card border-primary">
+        <button type="submit" name="buyfortwo" id="fortwo" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
+          <div class="img-wrapper">
+            <img src="images/tyler-nix-KLLcTHE20bI-unsplash Cropped.jpg" class="card-img-top inner-img" alt="...">
+          </div>
+        </button>
+
+        <div class="card-body">
+          <div class="row">
+            <h5 class="card-title">Билет за двама</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">Билет за две лица.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            1 час<br>
+            <b>2.90лв</b>
+            </div>
+            </p>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <button type="submit" name="buyfortwo" id="fortwo2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
+        </div>
+      </div>
+
+      <div class="card border-primary">
+        <button type="submit" name="buyforthree" id="forthree" data-bs-toggle="modal" data-bs-target="#exampleModal" class="edge-color">
+          <div class="img-wrapper">
+            <img src="images/omar-lopez-rwF_pJRWhAI-unsplash Cropped.jpg" class="card-img-top inner-img" alt="...">
+          </div>
+        </button>
+        <div class="card-body">
+          <div class="row">
+            <h5 class="card-title">Билет за трима</h5>
+          </div>
+          <div class="row">
+            <p class="card-text">Билет за три лица.<br>
+          </div>
+          <div class="row">
+            <div class="col-4">
+            Валидонст:<br>
+            Цена:
+            </div>
+            <div class="col-8">
+            1 час<br>
+            <b>5.50лв</b>
+            </div>
+            </p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" name="buyforthree" id="forthree2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Купи</button>
+        </div>
+      </div>
+
+      <div class="card border-0"></div>
+      <div class="card border-0"></div>
+
+    </div>
+  </div>
+
+  <!--footer-->
+<!-- <div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script> -->
+<!--end of footer-->
+
+
   <script>
     $("#student").click(function() {
       let loggedIn = "<?php echo checkIfLoggedIn() ?>";
@@ -266,6 +401,60 @@ session_start();
     });
   </script>
 
+<script>
+    $("#fortwo").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#fortwo2").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
+
+  <script>
+    $("#forthree2").click(function() {
+      let loggedIn = "<?php echo checkIfLoggedIn() ?>";
+      if (loggedIn != 1) {
+        alert("Не сте влезли в профила си!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+    });
+  </script>
+
   <script>
     $("#student").click(function() {
       let canContinue = "<?php echo checkIfTicketAlreadyBought(1) ?>";
@@ -283,6 +472,10 @@ session_start();
       var str = "Закупете билет за студенти";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -303,6 +496,10 @@ session_start();
       var str = "Закупете билет за студенти";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -325,6 +522,10 @@ session_start();
       var str = "Закупете билет за пенсионери";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -345,6 +546,10 @@ session_start();
       var str = "Закупете билет за пенсионери";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 1.50лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -362,9 +567,13 @@ session_start();
       const button = document.getElementById("finalButton");
       button.setAttribute("name", "buynormal");
 
-      var str = "Закупете нормален билет";
+      var str = "Закупете стандартен билет";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.00лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -382,9 +591,13 @@ session_start();
       const button = document.getElementById("finalButton");
       button.setAttribute("name", "buynormal");
 
-      var str = "Закупете нормален билет";
+      var str = "Закупете стандартен билет";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.00лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -405,6 +618,10 @@ session_start();
       var str = "Закупете билет за цял ден";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 10.00лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
@@ -425,9 +642,108 @@ session_start();
       var str = "Закупете билет за цял ден";
       $("#data").html(str);
       $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 10.00лв.</b>";
+      $("#price").html(str);
     });
   </script>
 
+<script>
+    $("#fortwo").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(5) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyfortwo");
+
+      var str = "Закупете билет за двама";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.90лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#fortwo2").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(5) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyfortwo");
+
+      var str = "Закупете билет за двама";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 2.90лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+<script>
+    $("#forthree").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(6) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyforthree");
+
+      var str = "Закупете билет за трима";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 5.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
+
+  <script>
+    $("#forthree2").click(function() {
+      let canContinue = "<?php echo checkIfTicketAlreadyBought(6) ?>";
+      if (canContinue != 1) {
+        alert("Вече имате закупен билет!");
+        const modal = document.getElementById("exampleModal");
+        modal.setAttribute("hidden", "");
+        location.reload();
+        return;
+      }
+
+      const button = document.getElementById("finalButton");
+      button.setAttribute("name", "buyforthree");
+
+      var str = "Закупете билет за трима";
+      $("#data").html(str);
+      $("#finalButton").html(str);
+
+      const price = document.getElementById("price");
+      str = "<b>Цена: 5.50лв.</b>";
+      $("#price").html(str);
+    });
+  </script>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -454,8 +770,10 @@ session_start();
 
         </div>
         <div class="modal-footer">
+          <p class="text-start" id="price">Цена:</p>
           <button type="submit" id="finalButton" name="none" class="btn btn-primary"></button>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмяна</button>
+        </div>
 
           </form>
         </div>
@@ -495,6 +813,22 @@ session_start();
     $carddate = $_POST['valid'];
     $cardcvcode = $_POST['cvcode'];
     BuyTicket(4);
+  }
+
+  if (isset($_POST['buyfortwo'])) {
+    $cardnum = $_POST['cardnum'];
+    $cardname = $_POST['cardname'];
+    $carddate = $_POST['valid'];
+    $cardcvcode = $_POST['cvcode'];
+    BuyTicket(5);
+  }
+
+  if (isset($_POST['buyforthree'])) {
+    $cardnum = $_POST['cardnum'];
+    $cardname = $_POST['cardname'];
+    $carddate = $_POST['valid'];
+    $cardcvcode = $_POST['cvcode'];
+    BuyTicket(6);
   }
 
   function checkIfLoggedIn()
@@ -592,6 +926,9 @@ session_start();
     }
   }
   ?>
+
+
+
 </body>
 
 </html>

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- за nav bar-a-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+  <link rel="shortcut icon" href="icons/Iconshock-Real-Vista-Transportation-School-bus.ico"/>
 </head>
 
 <body>
@@ -32,25 +33,25 @@
      <div class="row my-row">
          <div class="col-12 col-md-6">
          <form method ="post">
-                    <div class="row col-md-10">
+                    <div class="row col-md-9">
                     <div class="mb-3">
                         <label for="email" class="form-label">Email адрес</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
                     </div>
                     </div>
-                    <div class="row col-md-10">
+                    <div class="row col-md-9">
                     <div class="mb-3">
                         <label for="name" class="form-label">Име</label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     </div>
-                    <div class="row col-md-6">
+                    <div class="row col-md-9">
                     <div class="mb-3">
                         <label for="password" class="form-label">Парола</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     </div>
-                    <div class="row col-md-6">
+                    <div class="row col-md-9">
                     <div class="mb-3">
                         <label for="confirmpassword" class="form-label">Повторете паролата</label>
                         <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
@@ -123,12 +124,22 @@
                 {
                      echo "<div class=\"container px-4\">";
                      echo "<p class=\"text-success\">";
-                     echo "Записът е добавен успешнo.";
+                     echo "Успешна регистрация.";
                      echo "</p>";
                      echo "</div>";
                 }    
             }
         ?>
+
+<!--footer-->
+<div class="mt-2">
+<div id="footer"></div>
+  <script>
+  $(function(){
+    $("#footer").load("footer.php");
+  });
+  </script>
+<!--end of footer-->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
