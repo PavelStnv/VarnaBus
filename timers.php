@@ -226,7 +226,7 @@ td {
 
       date_default_timezone_set('Europe/Sofia');
       $current_time = date('H:i:s', time());
-      $time_left;
+      $time_left = "00:00:00";
 
       while($row = mysqli_fetch_assoc($result))
       {
@@ -244,7 +244,7 @@ td {
           if($stop_time > $current_time)
           {
             $time_left = strtotime($stop_time) - strtotime($current_time);
-            $time_left = gmdate("H:i:s",$time_left);
+            $time_left = gmdate("H:i:s", $time_left);
             break;
           }
         }

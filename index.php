@@ -111,14 +111,8 @@
   </div>
 </div>
 
-
-  <table class="center">
-    <tr><td> Новини </td></tr>
-  </table>
-
-
-  <div class="card-group">
-        <div class="card me-3" style="max-width: 540px;">
+  <div class="card-group ms-2">
+        <div class="card me-3 border-primary" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
@@ -126,18 +120,17 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 1</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="card me-3" style="max-width: 540px;">
+        <div class="card me-3 border-primary" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
@@ -145,18 +138,17 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 2</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="card me-3" style="max-width: 540px;">
+        <div class="card me-3 border-primary" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="https://images.unsplash.com/photo-1611072233346-ee92ae6ed64b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=361&q=80"
@@ -164,18 +156,17 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 3 </h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="card me-3" style="max-width: 540px;">
+        <div class="card me-3 border-0" style="max-width: 540px;">
           <a href="news.php">
             <button class="btn btn-primary btn-lg">Прочетете повече новини</button>
           </a>

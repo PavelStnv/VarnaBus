@@ -62,11 +62,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 1</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут. Вместо да спират на спирки Младост и Георги Раговски, автобусите ще спират на спирки Катедралата и Почивка. Моля да ни извините за причиниеното неудобство.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
@@ -85,11 +84,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 2</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут. Вместо да спират на спирки Младост и Георги Раговски, автобусите ще спират на спирки Катедралата и Почивка. Моля да ни извините за причиниеното неудобство.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
@@ -108,11 +106,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 3</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут. Вместо да спират на спирки Младост и Георги Раговски, автобусите ще спират на спирки Катедралата и Почивка. Моля да ни извините за причиниеното неудобство.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
@@ -131,11 +128,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 4</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут. Вместо да спират на спирки Младост и Георги Раговски, автобусите ще спират на спирки Катедралата и Почивка. Моля да ни извините за причиниеното неудобство.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
@@ -154,11 +150,10 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <h5 class="card-title">Новина 5</h5>
+                        <p class="card-text">Утре, 19.12.2022г. поради ремонтни дейности на бул. Черни Връх линия номер 148 ще има нов маршрут. Вместо да спират на спирки Младост и Георги Раговски, автобусите ще спират на спирки Катедралата и Почивка. Моля да ни извините за причиниеното неудобство.</p>
+                        
+                        <a href="#" class="btn btn-primary">Прочети</a>
                     </div>
                 </div>
             </div>
